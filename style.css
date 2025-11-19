@@ -1,0 +1,418 @@
+/* Fonts */
+.righteous-regular {
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Navigation Bar */
+.navbar {
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #f4c542;
+    background-color: #6a4c93;
+    padding: 10px 0;
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.navbar li {
+    display: inline-block;
+    margin: 5px 15px;
+}
+
+.navbar li a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.navbar li a:hover {
+    color: #d8d2c4;
+}
+
+/* Buttons */
+button {
+    background-color: #f4c542;
+    color: #4b3b47;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #96109b;
+    transform: translateY(0.3cm);
+}
+
+/* Headings */
+h1, h2, h3, p {
+    font-family: "Righteous", sans-serif;
+    margin: 0 0 10px 0;
+}
+
+h2 {
+    color: #6a4c93;
+    border-bottom: 2px solid #f4c542;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    padding: 20px;
+}
+
+.product {
+    border: 2px solid #6a4c93;
+    padding: 15px;
+    text-align: center;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+}
+
+.product img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+#countLabel {
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#btnContainer {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.cart-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Cart Modal */
+.cart-modal, .cartModal, .payment-form-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.cart.content, .cartModal .content, .payment-form-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    width: 400px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+.cart.content h2, .payment-form-content h2 {
+    margin-bottom: 20px;
+}
+
+ul#cart-items {
+    list-style-type: none;
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+
+/* Payment Form */
+.payment-form-content input[type="text"],
+.payment-form-content input[type="number"],
+.payment-form-content input[type="month"],
+.payment-form-content select {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Footer */
+footer {
+    background-color: #6a4c93;
+    color: #f4c542;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+footer ul {
+    margin: 10px 0 0 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+footer li a {
+    color: #f4c542;
+    text-decoration: none;
+}
+
+footer li a:hover {
+    color: #d8d2c4;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar li {
+        margin: 5px 0;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr 1fr;
+        padding: 10px;
+    }
+
+    .cart.content, .payment-form-content {
+        width: 90%;
+        padding: 20px;
+    }
+
+    button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .btnContainer button, .addToCartBtn {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    #countLabel {
+        font-size: 14px;
+    }
+
+    .cart.content, .payment-form-content {
+        width: 95%;
+        padding: 15px;
+    }
+
+    footer ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+/* Feedback Form Styling */
+.form-container {
+  width: 85%;
+  max-width: 600px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.15);
+  font-family: "Righteous", sans-serif;
+}
+
+.form-container h3 {
+  text-align: center;
+  color: #6a4c93;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #f4c542;
+  padding-bottom: 10px;
+}
+
+.form-container label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+  color: #4b3b47;
+}
+
+.form-container i {
+  margin-left: 8px;
+  color: #6a4c93;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #6a4c93;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-family: "Righteous", sans-serif;
+  font-size: 14px;
+}
+
+.form-container textarea {
+  resize: vertical;
+}
+
+.form-container button {
+  background-color: #f4c542;
+  color: #4b3b47;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  display: block;
+  margin: 0 auto;
+}
+
+.form-container button:hover {
+  background-color: #96109b;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  .form-container {
+    width: 95%;
+    padding: 15px;
+  }
+  .form-container h3 {
+    font-size: 18px;
+  }
+  .form-container button {
+    width: 100%;
+    padding: 12px;
+  }
+}
+/* Shared Form Styling (Medium Size) */
+.form-container,
+.container {
+  width: 85%;
+  max-width: 500px;   /* Medium size */
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.15);
+  font-family: "Righteous", sans-serif;
+}
+
+/* Headings */
+.form-container h3,
+.container h2 {
+  text-align: center;
+  color: #6a4c93;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #f4c542;
+  padding-bottom: 10px;
+}
+
+/* Labels */
+.form-container label,
+.container label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+  color: #4b3b47;
+}
+
+/* Inputs, Selects, Textareas */
+.form-container input,
+.container input,
+.form-container select,
+.container select,
+.form-container textarea,
+.container textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #6a4c93;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-family: "Righteous", sans-serif;
+  font-size: 14px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Buttons */
+.form-container button,
+.container button {
+  background-color: #f4c542;
+  color: #4b3b47;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  display: block;
+  margin: 0 auto;
+}
+
+.form-container button:hover,
+.container button:hover {
+  background-color: #96109b;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .form-container,
+  .container {
+    width: 95%;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-container,
+  .container {
+    width: 95%;
+    padding: 15px;
+  }
+  .form-container h3,
+  .container h2 {
+    font-size: 18px;
+  }
+}
